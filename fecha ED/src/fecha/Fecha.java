@@ -21,11 +21,11 @@ public class Fecha {
 
 	public boolean valida() {
 
-		return validar();
+		return validarFecha();
 
 	}
 
-	public boolean validar() {
+	public boolean validarFecha() {
 		if (dia < 1 || dia > 31)
 			return false;
 		if (mes < 1 || mes > 12)
