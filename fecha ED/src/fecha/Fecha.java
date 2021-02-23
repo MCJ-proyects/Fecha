@@ -50,10 +50,7 @@ public class Fecha {
 			diasMes = 30;
 			break;
 		case 2: // Verificamos si el año es bisiesto
-			if ((anio % 400 == 0) || ((anio % 4 == 0) && (anio % 100 != 0)))
-				diasMes = 29;
-			else
-				diasMes = 28;
+			diasMes = bisiesto();
 			break;
 
 		}
@@ -62,6 +59,15 @@ public class Fecha {
 			return false;
 		else
 			return true;
+	}
+
+	public int bisiesto() {
+		int diasMes;
+		if ((anio % 400 == 0) || ((anio % 4 == 0) && (anio % 100 != 0)))
+			diasMes = 29;
+		else
+			diasMes = 28;
+		return diasMes;
 	}
 
 }
